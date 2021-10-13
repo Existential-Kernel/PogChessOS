@@ -2,14 +2,30 @@
 #define DEFS_H
 
 #include "stdlib.h"
-#include <unistd.h>
 
-typedef unsigned long long uint64_t;
+#define DEBUG
 
-#define NAME "PogChess 1.0"
-#define BOARD_SQUARE_NUM 120
+#ifndef DEBUG
+#define ASSERT(n)
+#else
+#define ASSERT(n) \
+if(!(n)) { \
+printf("%s - Failed",#n); \
+printf("On %s ",__DATE__); \
+printf("At %s ",__TIME__); \
+printf("In File %s ",__FILE__); \
+printf("At Line %d\n",__LINE__); \
+exit(1);}
+#endif
+
+typedef unsigned long long U64;
+
+#define NAME "Vice 1.0"
+#define BRD_SQ_NUM 120
 
 #define MAXGAMEMOVES 2048
+
+#define START_FEN  "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
 
 enum { EMPTY, wP, wN, wB, wR, wQ, wK, bP, bN, bB, bR, bQ, bK  };
 enum { FILE_A, FILE_B, FILE_C, FILE_D, FILE_E, FILE_F, FILE_G, FILE_H, FILE_NONE };
@@ -35,61 +51,66 @@ enum { WKCA = 1, WQCA = 2, BKCA = 4, BQCA = 8 };
 typedef struct {
 	
 	int move;
-	int castleperm;
-	int enpas;
-	int fiftymove;
-	uint64_t poskey;
+	int castlePerm;
+	int enPas;
+	int fiftyMove;
+	U64 posKey;
 
 } S_UNDO;
 
 typedef struct {
 
-	int pieces[BOARD_SQUARE_NUM];
-	uint64_t pawns[3];
+	int pieces[BRD_SQ_NUM];
+	U64 pawns[3];
 		
-	int kingsq[2];
+	int KingSq[2];
 	
 	int side;
-	int enpas;
-	int fiftymove;
+	int enPas;
+	int fiftyMove;
 	
 	int ply;
-	int hisply;
+	int hisPly;
 	
-	int castleperm;
+	int castlePerm;
 	
-	uint64_t poskey;
+	U64 posKey;
 	
-	int piecenum[13];
-	int bigpiece[3];
-	int majpiece[3];
-	int minpiece[3];
+	int pceNum[13];
+	int bigPce[3];
+	int majPce[3];
+	int minPce[3];
 	
 	S_UNDO history[MAXGAMEMOVES];
 	
 	// piece list
-	int piecelist[13][10];	
+	int pList[13][10];	
 	
 } S_BOARD;
 
 /* MACROS */
 
 #define FR2SQ(f,r) ( (21 + (f) ) + ( (r) * 10 ) ) 
-#define SQ64(sq120) Sq120ToSq64[sq120]
+#define SQ64(sq120) (Sq120ToSq64[(sq120)])
+#define SQ120(sq64) (Sq64ToSq120[(sq64)])
 #define POP(b) PopBit(b)
 #define CNT(b) CountBits(b)
-#define CLRBIT(bb,sq) ((bb) &= clearmask[(sq)])
-#define SETBIT(bb,sq) ((bb) |= setmask[(sq)])
+#define CLRBIT(bb,sq) ((bb) &= ClearMask[(sq)])
+#define SETBIT(bb,sq) ((bb) |= SetMask[(sq)])
 
 /* GLOBALS */
 
-extern int Sq120ToSq64[BOARD_SQUARE_NUM];
+extern int Sq120ToSq64[BRD_SQ_NUM];
 extern int Sq64ToSq120[64];
-extern uint64_t setmask[64];
-extern uint64_t clearmask[64];
-extern uint64_t piecekeys[13][120];
-extern uint64_t sidekey;
-extern uint64_t castlekeys[16];
+extern U64 SetMask[64];
+extern U64 ClearMask[64];
+extern U64 PieceKeys[13][120];
+extern U64 SideKey;
+extern U64 CastleKeys[16];
+extern char PceChar[];
+extern char SideChar[];
+extern char RankChar[];
+extern char FileChar[];
 
 /* FUNCTIONS */
 
@@ -97,26 +118,19 @@ extern uint64_t castlekeys[16];
 extern void AllInit();
 
 // bitboards.c
-extern void PrintBitBoard(uint64_t bb);
-extern int PopBit(uint64_t *bb);
-extern int CountBits(uint64_t b);
+extern void PrintBitBoard(U64 bb);
+extern int PopBit(U64 *bb);
+extern int CountBits(U64 b);
 
 // hashkeys.c
-extern uint64_t GeneratePosKey(const S_BOARD *pos);
+extern U64 GeneratePosKey(const S_BOARD *pos);
+
+// board.c
+extern void ResetBoard(S_BOARD *pos);
+extern int ParseFen(char *fen, S_BOARD *pos);
+extern void PrintBoard(const S_BOARD *pos);
+
 
 #endif
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

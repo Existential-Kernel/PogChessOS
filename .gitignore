@@ -1,11 +1,15 @@
 # Tests
-test.cpp
+tests
 
 # Executables
 pogchess
 test
+*.exe  
+*.out
 
 # Misc
-savedcode.txt
-
 .vscode
+
+# Development
+prototype
+dev
