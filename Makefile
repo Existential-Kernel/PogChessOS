@@ -1,3 +1,6 @@
+src=engine
+name=pogchess
+version="1.0"
 
 all: build exec
 
@@ -6,16 +9,16 @@ test:
 	./test
 
 build:
-	g++ engine/mainframe.cpp engine/init.cpp -o pogchess
+	gcc $(src)/mainframe.c $(src)/init.c $(src)/bitboards.c $(src)/hashkeys.c $(src)/board.c $(src)/data.c -o pogchess
 
 exec:
-	./pogchess
+	./$(name)
 
 copy:
-	sudo cp pogchess /usr/bin
+	sudo cp $(name) /usr/bin
 
 clean:
-	rm -rf main
+	rm -rf $(name)
 	clear
 
 uninstall:
