@@ -20,7 +20,7 @@ int main() {
 	ASSERT(CheckBoard(board));
 	printf("\nForced asserts...\n");
 	board->posKey ^= SideKey;
-	ASSERT(CheckBoard(board));
+	ASSERT(CheckBoard(board)); 
 	
 	
 	return 0;

@@ -1,3 +1,5 @@
+// board.c
+
 #include "stdio.h"
 #include "defs.h"
 
@@ -99,15 +101,19 @@ void UpdateListsMaterial(S_BOARD *pos) {
 			
 			pos->material[colour] += PieceVal[piece];
 			
-			// piece list
-			// pList[wP][0] = a1;
-			// pList[wP][1] = a2;
-			
 			pos->pList[piece][pos->pceNum[piece]] = sq;
 			pos->pceNum[piece]++;
 			
 			if(piece==wK) pos->KingSq[WHITE] = sq;
-			if(piece==bK) pos->KingSq[BLACK] = sq;
+			if(piece==bK) pos->KingSq[BLACK] = sq;	
+			
+			if(piece==wP) {
+				SETBIT(pos->pawns[WHITE],SQ64(sq));
+				SETBIT(pos->pawns[BOTH],SQ64(sq));
+			} else if(piece==bP) {
+				SETBIT(pos->pawns[BLACK],SQ64(sq));
+				SETBIT(pos->pawns[BOTH],SQ64(sq));
+			}
 		}
 	}
 }
@@ -212,6 +218,8 @@ int ParseFen(char *fen, S_BOARD *pos) {
 	
 	pos->posKey = GeneratePosKey(pos); 
 	
+	UpdateListsMaterial(pos);
+	
 	return 0;
 }
 
@@ -252,11 +260,10 @@ void ResetBoard(S_BOARD *pos) {
 	pos->posKey = 0ULL;
 	
 }
-
 void PrintBoard(const S_BOARD *pos) {
 	
 	int sq,file,rank,piece;
-	
+
 	printf("\nGame Board:\n\n");
 	
 	for(rank = RANK_8; rank >= RANK_1; rank--) {
