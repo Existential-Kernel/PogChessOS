@@ -77,9 +77,10 @@ typedef struct {
 	U64 posKey;
 	
 	int pceNum[13];
-	int bigPce[3];
-	int majPce[3];
-	int minPce[3];
+	int bigPce[2];
+	int majPce[2];
+	int minPce[2];
+	int material[2];
 	
 	S_UNDO history[MAXGAMEMOVES];
 	
@@ -111,6 +112,15 @@ extern char PceChar[];
 extern char SideChar[];
 extern char RankChar[];
 extern char FileChar[];
+
+extern int PieceBig[13];
+extern int PieceMaj[13];
+extern int PieceMin[13];
+extern int PieceVal[13];
+extern int PieceCol[13];
+
+int FilesBrd[BRD_SQ_NUM];
+int RanksBrd[BRD_SQ_NUM];
 
 /* FUNCTIONS */
 
