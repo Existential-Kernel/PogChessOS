@@ -1,6 +1,6 @@
 #include <iostream>
 
-void banner() {
+void banner(void) {
     std::cout << "\n";
     std::cout << "\n";
     std::cout << "\n";

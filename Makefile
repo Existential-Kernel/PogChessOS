@@ -1,25 +1,28 @@
 src=engine
-name=pogchess
+NAME=pogchess
 version="1.0"
 
 all: build exec
 
+redo:
+	rm -rf engine/*
+
 test:
-	g++ test.cpp -o test
-	./test
+	g++ tests/test.cpp -o tests/test
+	./tests/test
 
 build:
-	gcc $(src)/mainframe.c $(src)/init.c $(src)/bitboards.c $(src)/hashkeys.c $(src)/board.c $(src)/data.c -o pogchess
+	g++ $(src)/vice.c $(src)/init.c $(src)/bitboards.c $(src)/hashkeys.c $(src)/board.c $(src)/data.c $(src)/attack.c $(src)/io.c $(src)/movegen.c $(src)/validate.c $(src)/makemove.c $(src)/perft.c $(src)/search.c $(src)/misc.c $(src)/pvtable.c -o $(NAME)
 
 exec:
-	./$(name)
+	./$(NAME)
 
-copy:
-	sudo cp $(name) /usr/bin
+install:
+	sudo cp $(NAME) /usr/bin
 
 clean:
-	rm -rf $(name)
+	rm -rf $(src)/$(NAME)
 	clear
 
 uninstall:
-	sudo rm -rf /usr/bin/pogchess
+	sudo rm -rf /usr/bin/$(name)

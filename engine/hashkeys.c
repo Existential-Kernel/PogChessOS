@@ -32,3 +32,4 @@ U64 GeneratePosKey(const S_BOARD *pos) {
 	
 	return finalKey;
 }
+

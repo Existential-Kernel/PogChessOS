@@ -7,8 +7,11 @@
     <img alt="GitHub" align="center" src="https://img.shields.io/github/license/existential-nonce/passgen">
 </p>
 
+# Prerequesites
+
+
 # Docs 
-Please read the [documentation](https://github.com/Existential-nonce/PogChess/blob/main/docs/Documentation.md) file to read about the process of the project, the intentions I had, the algorithm used for the engine, etc... This documentation was specifically designed for my highschool programming project for my CS class,so it's not the traditional kind of documentation you'd expect.
+Please read the [documentation](https://github.com/Existential-nonce/PogChess/blob/main/docs/Documentation.md) to read about the process of the project, the intentions I had, the algorithm used for the engine, etc... This documentation was specifically designed for my highschool programming project for my CS class, so it's not the traditional kind of documentation you'd expect on github.
 
 # Notes
 This is one of my first "big" projects I've done so far. If there's anything that's wrong about my code such as (but not limited to):
