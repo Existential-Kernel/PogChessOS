@@ -2,11 +2,11 @@
 
 ## Table of contents
 
-* Introduction
-* Linux environment compatibility
-* How the engine works
-* Flowchart
-* Conclusion
+- [Introduction](#introduction)
+- [Linux environment compatibility](#linux-environment-compatibility)
+- [How the engine works](#how-the-engine-works)
+- [Flowchart](#flowchart)
+- [Conclusion](#conclusion)
 
 ---
 

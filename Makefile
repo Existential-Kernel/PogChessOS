@@ -1,6 +1,7 @@
-src=engine
+CC=g++
+SRC=engine
 NAME=pogchess
-version="1.0"
+VERSION="1.0"
 
 all: build exec
 
@@ -12,20 +13,20 @@ test:
 	./tests/test
 
 build:
-	g++ $(src)/vice.c $(src)/init.c $(src)/bitboards.c $(src)/hashkeys.c \
-	$(src)/board.c $(src)/data.c $(src)/attack.c $(src)/io.c \
-	$(src)/movegen.c $(src)/validate.c $(src)/makemove.c $(src)/perft.c \
-	$(src)/search.c $(src)/misc.c $(src)/pvtable.c -o $(NAME)
+	$(CC) $(SRC)/main.c $(SRC)/init.c $(SRC)/bitboards.c $(SRC)/hashkeys.c \
+	$(SRC)/board.c $(SRC)/data.c $(SRC)/attack.c $(SRC)/io.c \
+	$(SRC)/movegen.c $(SRC)/validate.c $(SRC)/makemove.c $(SRC)/perft.c \
+	$(SRC)/search.c $(SRC)/misc.c $(SRC)/pvtable.c -o $(NAME)
 
 exec:
 	./$(NAME)
 
 clean:
-	rm -rf $(src)/$(NAME)
+	rm -rf $(SRC)/$(NAME)
 	clear
 
 install:
 	sudo cp $(NAME) /usr/bin
 
 uninstall:
-	sudo rm -rf /usr/bin/$(name)
+	sudo rm -rf /usr/bin/$(NAME)

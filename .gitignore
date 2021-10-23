@@ -12,6 +12,7 @@ test
 
 # Misc
 .vscode
+.tex
 
 # Development
 prototype
