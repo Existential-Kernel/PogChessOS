@@ -9,7 +9,7 @@
     /github/v/release/:user/:repo?display_name=tag&sort=semver 
     -->
 </p>
-<p align="center">A custom Operating System kernel that can only play chess</p>
+<p align="center">A custom operating system kernel that can only play chess</p>
 
 ## Features
 - Chess engine in C++
