@@ -4,12 +4,19 @@
     <img alt="GitHub code size in bytes" align="center" src="https://img.shields.io/github/languages/code-size/existential-nonce/passgen">
     <img alt="GitHub" align="center" src="https://img.shields.io/github/license/existential-nonce/passgen">
     <img alt="Downloads" align="center" src="https://img.shields.io/github/downloads/Existential-nonce/PogChess/total.svg?label=downloads%20%28since%202019%29&style=flat-square"
+    <--!     
     /chocolatey/v/:packageName
-    /github/v/release/:user/:repo?display_name=tag&sort=semver
-
-
+    /github/v/release/:user/:repo?display_name=tag&sort=semver 
+    -->
 </p>
-<p align="center">A CLI chess engine made with C++</p>
+<p align="center">A custom Operating System kernel that can only play chess</p>
+
+## Features
+- Chess engine in C++
+- Engine ELO configuration up to x elo
+- Full CLI as the UI
+- Working .iso file
+- Custom bootstraper
 
 
 ## Demo
@@ -68,7 +75,7 @@ sudo make
 
 ### Windows
 **Option 1:**
-You can download Linux distributions from the microsoft store. If the box is ticked, that means the distro was tested and capable of running PogChess:
+You can use the Windows Subsystem for Linux (WSL) to run the CLI. If the box is ticked, that means the distro was tested and capable of running PogChess:
 - [ ] [Ubuntu](https://www.microsoft.com/en-us/store/p/ubuntu/9nblggh4msv6)
 - [ ] [Debian]()
 - [ ] [CentOS]()
@@ -84,6 +91,7 @@ You can download Linux distributions from the microsoft store. If the box is tic
 
 ## Docs 
 Please read the [documentation](https://github.com/Existential-nonce/PogChess/blob/main/docs/Documentation.md) to read about the process of the project, the intentions I had, the algorithm used for the engine, etc... The documentation was specifically designed for my highschool programming project for my A level CS class.
+
 
 ### Resources used:
 * https://www.youtube.com/playlist?list=PLZ1QII7yudbc-Ky058TEaOstZHVbT-2hg
