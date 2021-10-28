@@ -1,7 +1,9 @@
-CC=g++
+CC=gcc
 SRC=engine
 NAME=pogchess
 VERSION="1.0"
+
+.PHONY: remake test build exec clean install
 
 all: build exec
 

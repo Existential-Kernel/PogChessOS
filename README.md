@@ -21,6 +21,7 @@
 |---|---|---|---|
 | **Git** | https://git-scm.com/downloads | ![](assets/README/maybe.png) | You can either download it using git or by downloading a [zip version](https://github.com/Existential-nonce/PogChess/archive/refs/heads/main.zip) of the repository |
 | **CMake** | https://cmake.org/download/ | ![](assets/README/check.png) | Required for building the entire code
+| **QEMU** |---|---|---|
 
 
 ## Download
@@ -39,7 +40,7 @@ Make sure to update your system depending on your OS:
 $ sudo apt-get update -y && sudo apt-get upgrade -y
 ```
 
-#### RHEL Fedora/CentOS/Red Hat/
+#### RHEL Fedora/CentOS/Red Hat
 ```bash
 $ sudo yum update -y && sudo yum upgrade -y
 ```
@@ -75,11 +76,7 @@ You can download Linux distributions from the microsoft store. If the box is tic
 
 
 **Option 2:**
-You can install the 
-With PowerShell, you must ensure Get-ExecutionPolicy is not Restricted. We suggest using Bypass to bypass the policy to get things installed or AllSigned for quite a bit more security. Run `Get-ExecutionPolicy`. If it returns Restricted, then run `Set-ExecutionPolicy AllSigned` or `Set-ExecutionPolicy Bypass -Scope Process`. Next, run the following command:
-```powershell
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-```
+
 
 ### MAC OS
 ==== Untested for now ====
@@ -88,9 +85,10 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 ## Docs 
 Please read the [documentation](https://github.com/Existential-nonce/PogChess/blob/main/docs/Documentation.md) to read about the process of the project, the intentions I had, the algorithm used for the engine, etc... The documentation was specifically designed for my highschool programming project for my A level CS class.
 
-### Credits and Resources:
+### Resources used:
 * https://www.youtube.com/playlist?list=PLZ1QII7yudbc-Ky058TEaOstZHVbT-2hg
 * https://www.chessprogramming.org/
+* https://wiki.osdev.org/
 
 
 ### Contributing

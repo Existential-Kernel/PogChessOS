@@ -9,6 +9,9 @@ pogchess
 test
 *.exe  
 *.out
+*.bin
+*.img
+*.iso
 
 # Misc
 .vscode

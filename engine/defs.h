@@ -25,6 +25,7 @@ typedef unsigned long long U64;
 
 #define MAXGAMEMOVES 2048
 #define MAXPOSITIONMOVES 256
+#define MAXDEPTH 64
 
 #define START_FEN  "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
 
@@ -109,9 +110,23 @@ typedef struct {
 	int pList[13][10];	
 
 	S_PVTABLE PvTable[1];	
+	int PvArray[MAXDEPTH];
 	
 } S_BOARD;
 
+typedef struct {
+	int starttime;
+	int stoptime;
+	int depth;
+	int depthset;
+	int timeset;
+
+	long nodes;
+
+	int quit;
+	int stopped;
+	
+} S_SEARCHINFO;
 /* GAME MOVE */
 
 /*                         	                        
@@ -222,6 +237,7 @@ extern int PieceValid(const int pce);
 
 // movegen.c
 extern void GenerateAllMoves(const S_BOARD *pos, S_MOVELIST *list);
+extern int MoveExists(S_BOARD *pos, const int move);
 
 // makemove.c
 extern int MakeMove(S_BOARD *pos, int move);
@@ -242,3 +258,18 @@ extern void StorePvMove(const S_BOARD *pos, const int move);
 extern int ProbePvTable(const S_BOARD *pos);
 
 #endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

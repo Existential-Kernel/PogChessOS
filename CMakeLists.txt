@@ -1,7 +1,11 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.15)
 
-# set the project name
-project(PogChess)
+set(PROJECT_NAME PogChess)
 
-# add the executable
-add_executable(PogChess PogChess.cxx)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+project(${PROJECT_NAME} VERSION 1.0)
+add_executable(${PROJECT_NAME}, tests/test.cpp)
+
+message("Processing CMakeLists.txt")

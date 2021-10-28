@@ -1,11 +1,11 @@
-# What type of PR are you creating?
-- [ ] Adding feature(s)
-- [ ] Fixing bug(s)
-- [ ] Documentation change(s)
+# What does this PR do?
+- [ ] Add features
+- [ ] Fix bugs
+- [ ] Change the repo's documentation
 - [ ] Refactoring code
 - [ ] Other
 
-# What does this PR do?
+# Briefly explain what this PR does:
 
 
 ## Why is this valuable?
