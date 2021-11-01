@@ -13,8 +13,7 @@ test
 *.img
 *.iso
 
-# Misc
-.vscode
-
 # Development
 dev
+
+# Misc

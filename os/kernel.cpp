@@ -16,7 +16,8 @@
 
 */
  
-/* Hardware text mode color constants. */
+// Hardware text mode color constants.
+
 enum vga_color {
 	VGA_COLOR_BLACK = 0,
 	VGA_COLOR_BLUE = 1,
@@ -45,7 +46,7 @@ static inline uint16_t vga_entry(unsigned char uc, uint8_t color)
 {
 	return (uint16_t) uc | (uint16_t) color << 8;
 }
- 
+
 size_t strlen(const char* str) 
 {
 	size_t len = 0;
@@ -92,8 +93,9 @@ void terminal_putchar(char c)
 	terminal_putentryat(c, terminal_color, terminal_column, terminal_row);
 	if (++terminal_column == VGA_WIDTH) {
 		terminal_column = 0;
-		if (++terminal_row == VGA_HEIGHT)
+		if (++terminal_row == VGA_HEIGHT) {
 			terminal_row = 0;
+		}
 	}
 }
  

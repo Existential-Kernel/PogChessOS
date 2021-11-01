@@ -71,17 +71,14 @@ typedef struct {
 } S_PVTABLE;
 
 typedef struct {
-	
 	int move;
 	int castlePerm;
 	int enPas;
 	int fiftyMove;
 	U64 posKey;
-
 } S_UNDO;
 
 typedef struct {
-
 	int pieces[BRD_SQ_NUM];
 	U64 pawns[3];
 		
@@ -111,7 +108,7 @@ typedef struct {
 
 	S_PVTABLE PvTable[1];	
 	int PvArray[MAXDEPTH];
-	
+
 } S_BOARD;
 
 typedef struct {
@@ -125,7 +122,7 @@ typedef struct {
 
 	int quit;
 	int stopped;
-	
+
 } S_SEARCHINFO;
 /* GAME MOVE */
 
