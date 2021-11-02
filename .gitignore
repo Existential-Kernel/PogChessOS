@@ -1,19 +1,48 @@
 # Tests
-tests
+tests/
 
 # Builds
 build
 
-# Executables and other similar files
-pogchess
-test
-*.exe  
-*.out
-*.bin
-*.img
-*.iso
+# C/C++ related executables and other similiar file types
+*.d
 
-# Development
-dev
+*.slo
+*.lo
+*.o
+*.obj
+
+*.gch
+*.pch
+
+*.so
+*.dylib
+*.dll
+
+*.mod
+*.smod
+
+*.lai
+*.la
+*.a
+*.lib
+
+*.exe
+*.out
+*.app
+
+# CMake
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
 
 # Misc
+dev
