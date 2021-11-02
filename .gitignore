@@ -2,7 +2,7 @@
 tests/
 
 # Builds
-build
+[Bb][Uu][Ii][Ll][Dd]/
 
 # C/C++ related executables and other similiar file types
 *.d
