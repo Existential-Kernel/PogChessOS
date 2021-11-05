@@ -5,13 +5,6 @@
     <a href="https://www.codefactor.io/repository/github/existential-nonce/pogchess"><img alt="codefactor" align="center" src="https://www.codefactor.io/repository/github/existential-nonce/pogchess/badge?s=21c9d17dad3405b1a8947910ddd6fe5a3dfab838"></a>
     <img alt="lines of code" align="center" src="https://img.shields.io/tokei/lines/github/Existential-nonce/PogChessOS">
     <img alt="GitHub" align="center" src="https://img.shields.io/github/license/existential-nonce/passgen">
-    
-    <--!     
-    /chocolatey/v/:packageName
-    /github/v/release/:user/:repo?display_name=tag&sort=semver 
-    -->         
-
-
 </p>
 <p align="center">A custom 32-bit Operating System kernel that can only play chess</p>
 
