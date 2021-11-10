@@ -10,9 +10,9 @@
 
 <p align="center">
 <br>
-============================= <br>
+========================== <br>
 🚧 NOTE: THIS PROJECT IS UNDER CONSTRUCTION 🚧 <br>
-============================= <br>
+========================== <br>
 </p>
 
 - - -
@@ -107,18 +107,18 @@ If you want to read about the process of the kernel, the intentions I had, the a
 
 - - -
 
-### Resources used:
+## Resources used:
 * https://www.youtube.com/playlist?list=PLZ1QII7yudbc-Ky058TEaOstZHVbT-2hg
 * https://www.chessprogramming.org/
 * https://wiki.osdev.org/
 
 - - -
 
-### Contributing
+## Contributing
 Before creating an issue, please ensure that it hasn't already been reported/suggested, and double-check the documentation.
 See the [Contribution Guidelines](https://github.com/Existential-nonce/PogChess/blob/main/CONTRIBUTING.md) if you'd like to submit a PR.
 
 - - -
 
-### License 
+## License 
 [MIT](https://github.com/Existential-nonce/PogChess/blob/main/LICENSE)
