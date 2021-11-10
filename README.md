@@ -8,6 +8,13 @@
 </p>
 <p align="center">A custom 32-bit Operating System kernel that can only play chess</p>
 
+<p align="center">
+<br>
+============================= <br>
+🚧 NOTE: THIS PROJECT IS UNDER CONSTRUCTION 🚧 <br>
+============================= <br>
+</p>
+
 - - -
 
 ## Features
@@ -77,8 +84,8 @@ git clone https://github.com/Existential-nonce/PogChess.git
 </details>
 
 <details>
-    <summary>
-        <b>Windows:</b>
+<summary>
+<b>Windows:</b>
     </summary>
 
 
@@ -114,4 +121,4 @@ See the [Contribution Guidelines](https://github.com/Existential-nonce/PogChess/
 - - -
 
 ### License 
-Licensed by [MIT](https://github.com/Existential-nonce/PogChess/blob/main/LICENSE)
+[MIT](https://github.com/Existential-nonce/PogChess/blob/main/LICENSE)
