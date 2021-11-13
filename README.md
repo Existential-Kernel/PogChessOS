@@ -18,8 +18,8 @@
 - - -
 
 ## Features
-- Chess engine in C++
-- Engine ELO configuration up to x elo
+- Chess engine in C
+- Engine ELO configuration up to (add maximum elo here) elo
 - Full CLI as the UI
 - Working .iso file
 - Custom bootstraper
