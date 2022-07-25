@@ -8,11 +8,6 @@
 <p align="center">A custom 32-bit Operating System kernel that can only play chess</p>
 
 <p align="center">
-<br>
-========================== <br>
-🚧 NOTE: THIS PROJECT IS UNDER CONSTRUCTION 🚧 <br>
-========================== <br>
-</p>
 
 - - -
 
